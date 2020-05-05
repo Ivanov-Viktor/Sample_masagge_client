@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="end"
     android:layout_marginStart="64dp"
     android:layout_marginTop="4dp"
-    app:layout_goneMarginStart="4dp"
     android:layout_marginBottom="4dp"
-    android:layout_gravity="end"
     android:background="@drawable/message_my_background"
     android:gravity="start"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="8dp"
+    app:layout_goneMarginStart="4dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
             android:textColor="@color/sender_name_color"
             android:textSize="13sp"
             android:textStyle="bold"
-            tools:text="username (Full name)"/>
+            tools:text="username (Full name)" />
 
         <TextView
             android:id="@+id/myData"
@@ -45,9 +45,6 @@
         android:layout_marginTop="4dp"
         android:textColor="@android:color/black"
         android:textSize="14sp"
-        tools:text="hello i'm Bobhkhdhlfdgfldg
-gdfghfd'lkgfhkggggggggggggggggggggggggggggggg
-gggggggggggggggggg" />
-
+        tools:text="Whenever any change is done to a file which is being tracked by Git, we need to re-stage those files and re-commit them again. Until those files are not re-staged and re-committed, they will be tracked by Git." />
 
 </LinearLayout>

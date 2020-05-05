@@ -14,7 +14,7 @@ class ChatFragment : Fragment() {
     }
 
     private val username =
-        arguments?.getString(USERNAME) ?: throw IllegalArgumentException("No username passed")
+        this.arguments?.getString(USERNAME) ?: throw IllegalArgumentException("No username passed")
 
     override fun onCreateView(
         inflater: LayoutInflater,

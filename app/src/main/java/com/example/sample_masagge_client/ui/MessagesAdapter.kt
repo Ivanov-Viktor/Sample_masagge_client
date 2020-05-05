@@ -17,8 +17,8 @@ class MessagesAdapter(
 
     companion object {
         val messages = mutableListOf<Message>()
-        private val MESSAGE_TYPE = 0
-        private val MY_MESSAGE_TYPE = 1
+        private const val MESSAGE_TYPE = 0
+        private const val MY_MESSAGE_TYPE = 1
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

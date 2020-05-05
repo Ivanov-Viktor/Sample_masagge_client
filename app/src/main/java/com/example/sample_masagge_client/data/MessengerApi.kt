@@ -11,19 +11,19 @@ interface MessengerApi {
         const val HOST = "https://sample-message-server.herokuapp.com"
     }
 
-    @POST("/register")
+    @POST(value = "/register")
     fun register(@Body user: User): Call<ApiResponse>
 
-    @GET("/users")
+    @GET(value = "/users")
     fun getAllUsers(): Call<List<User>>
 
-    @GET("/allMessages")
+    @GET(value = "/allMessages")
     fun getAllMessages(): Call<List<Message>>
 
-    @POST("/postMessages")
+    @POST(value = "/postMessages")
     fun postMessage(@Body messageRequest: MessageRequest): Call<ApiResponse>
 
-    @GET("/lastMessages")
+    @GET(value = "/lastMessages")
     fun getLastMessages(@Query("sinceId") sinceId: Int): Call<List<Message>>
 
 }

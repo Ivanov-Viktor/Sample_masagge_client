@@ -1,7 +1,7 @@
 package com.example.sample_masagge_client.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.sample_masagge_client.R
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         supportFragmentManager.beginTransaction()
-            .add(R.id.navHost,RegisterFragment())
+            .add(R.id.navHost, RegisterFragment())
             .commit()
     }
 }

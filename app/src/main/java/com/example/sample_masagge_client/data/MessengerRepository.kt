@@ -15,30 +15,35 @@ class MessengerRepository : CoroutineScope {
         .build()
         .create(MessengerApi::class.java)
 
-    fun register(username: String, lastName: String, firstName: String) = async {
-        val user = User(username, firstName, lastName)
-        messengerApi.register(user).execute().body()
+    fun register(username: String, lastName: String, firstName: String) =
+        async {
+            val user = User(username, firstName, lastName)
+            messengerApi.register(user).execute().body()
+        }
 
-    }
+    fun getAllUsers() =
+        async {
+            messengerApi.getAllUsers().execute().body()
+        }
 
-    fun getAllUsers() = async {
-        messengerApi.getAllUsers().execute().body()
-    }
+    fun getAllMessages() =
+        async {
+            messengerApi.getAllMessages().execute().body()
+        }
 
-    fun getAllMessages() = async {
-        messengerApi.getAllMessages().execute().body()
-    }
+    fun postMessage() =
+        async {
+            messengerApi.getAllMessages().execute().body()
+        }
 
-    fun postMessage() = async {
-        messengerApi.getAllMessages().execute().body()
-    }
+    fun postMessage(author: String, text: String) =
+        async {
+            val messageRequest = MessageRequest(author, text)
+            messengerApi.postMessage(messageRequest).execute().body()
+        }
 
-    fun postMessage(author: String, text:String)=async {
-        val messageRequest = MessageRequest(author, text)
-        messengerApi.postMessage(messageRequest).execute().body()
-    }
-
-    fun getLastMessages(sinceId: Int) = async {
-        messengerApi.getLastMessages(sinceId).execute().body()
-    }
+    fun getLastMessages(sinceId: Int) =
+        async {
+            messengerApi.getLastMessages(sinceId).execute().body()
+        }
 }

@@ -1,2 +1,2 @@
-rootProject.name='sample-masagge-client'
+rootProject.name = 'sample-masagge-client'
 include ':app'

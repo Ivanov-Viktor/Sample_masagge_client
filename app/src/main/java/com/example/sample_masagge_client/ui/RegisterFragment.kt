@@ -28,6 +28,7 @@ class RegisterFragment : Fragment(), CoroutineScope {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         buttonRegister.setOnClickListener {
+
             val username = inputUsername.text.toString()
             val firstName = inputLastName.text.toString()
             val lastName = inputLastName.text.toString()
@@ -43,6 +44,7 @@ class RegisterFragment : Fragment(), CoroutineScope {
                         } ?: run {
                         Toast.makeText(context, "Error occurred", Toast.LENGTH_SHORT).show()
                     }
+
                     buttonRegister.visibility = View.VISIBLE
                     loader.visibility = View.GONE
                 }
